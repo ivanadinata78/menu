@@ -2,6 +2,15 @@
 #include <conio.h>
 using namespace std;
 
+int data[100];
+int n;
+
+void tukar(int *a, int *b) {
+  int t = *a;
+  *a = *b; 
+  *b = t; 
+}
+
 void info(){
   system ("cls");
   cout<<"Indonesia Hebat, Poliban Juara";
