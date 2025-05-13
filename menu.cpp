@@ -2,7 +2,7 @@
 #include <conio.h>
 using namespace std;
 
-int data[100];
+int arr[100];
 int n;
 
 void tukar(int *a, int *b) {
@@ -37,7 +37,7 @@ void mInputArray() {
 
   for (int i = 0; i < n; i++) {
       cout << "Masukkan elemen ke-" << i + 1 << ": ";
-      cin >> data[i];
+      cin >> arr[i];
   }
 
   cout << "Data berhasil disimpan.\n";
@@ -52,13 +52,53 @@ void mTampilkanArray() {
   } else {
       cout << "Isi array: ";
       for (int i = 0; i < n; i++) {
-          cout << data[i] << " ";
+          cout << arr[i] << " ";
       }
       cout << endl;
   }
   cin.get(); cin.get();
 }
 
+
+void sortArray() {
+  system("cls");
+  if (n == 0) {
+      cout << "Array kosong. Tidak dapat diurutkan.\n";
+      cin.get(); cin.get();
+      return;
+  }
+
+  char mode;
+  cout << "Pilih metode pengurutan:\n";
+  cout << "a. Ascending\n";
+  cout << "b. Descending\n";
+  cout << "Pilihan Anda: ";
+  cin >> mode;
+
+  if (mode == 'a' || mode == 'A') {
+      for (int i = 0; i < n - 1; i++) {
+          for (int j = i + 1; j < n; j++) {
+              if (arr[i] > arr[j]) {
+                  tukar(&arr[i], &arr[j]);
+              }
+          }
+      }
+      cout << "Array berhasil diurutkan ASCENDING.\n";
+  } else if (mode == 'b' || mode == 'B') {
+      for (int i = 0; i < n - 1; i++) {
+          for (int j = i + 1; j < n; j++) {
+              if (arr[i] < arr[j]) {
+                  tukar(&arr[i], &arr[j]);
+              }
+          }
+      }
+      cout << "Array berhasil diurutkan DESCENDING.\n";
+  } else {
+      cout << "Pilihan tidak valid.\n";
+  }
+
+  cin.get(); cin.get();
+}
 
 int main() {
 char pl;
@@ -75,8 +115,7 @@ do
     mTampilkanArray();
     break;  
    case '3':
-    ();
-    /* code */
+    sortArray();
     break;  
    case '4':
     info();
