@@ -76,6 +76,7 @@ void sortArray() {
   cin >> mode;
 
   if (mode == 'a' || mode == 'A') {
+      // Exchange Sort Ascending
       for (int i = 0; i < n - 1; i++) {
           for (int j = i + 1; j < n; j++) {
               if (arr[i] > arr[j]) {
@@ -84,7 +85,9 @@ void sortArray() {
           }
       }
       cout << "Array berhasil diurutkan ASCENDING.\n";
+
   } else if (mode == 'b' || mode == 'B') {
+      // Exchange Sort Descending
       for (int i = 0; i < n - 1; i++) {
           for (int j = i + 1; j < n; j++) {
               if (arr[i] < arr[j]) {
@@ -93,9 +96,19 @@ void sortArray() {
           }
       }
       cout << "Array berhasil diurutkan DESCENDING.\n";
+
   } else {
       cout << "Pilihan tidak valid.\n";
+      cin.get(); cin.get();
+      return;
   }
+
+  //Cetak isi array yang sudah sorting
+  cout << "Isi array setelah sorting:\n";
+  for (int i = 0; i < n; i++) {
+      cout << arr[i] << " ";
+  }
+  cout << endl;
 
   cin.get(); cin.get();
 }
