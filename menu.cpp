@@ -19,20 +19,29 @@ void info(){
 
 void dMenu(){
 system("cls");
-cout<<"Aplikasi Tampilan Menu"<<"\n";       
-cout<<"1. Menu Pertama"<<"\n";            
-cout<<"2. Menu Kedua"<<"\n";            
-cout<<"3. Menu Ketiga"<<"\n";           
+cout<<"MENU"<<"\n";       
+cout<<"1. Menu Input Array"<<"\n";            
+cout<<"2. Menu Tampilkan Array"<<"\n";            
+cout<<"3. Menu Sorting Array"<<"\n";           
 cout<<"4. Menu Informasi"<<"\n";            
 cout<<"5. Exit"<<"\n";           
-cout<<"Masukan angka :";        
+cout<<"Pilih Menu :";        
 
 }
 
-void mPertama(string pesan){
-system("cls");
-cout<<"hallo saya menu "<<pesan;
-getch();
+void mInputArray() {
+  system("cls");
+  cout << "Masukkan jumlah elemen (maks 100): ";
+  cin >> n;
+  if (n > 100) n = 100;
+
+  for (int i = 0; i < n; i++) {
+      cout << "Masukkan elemen ke-" << i + 1 << ": ";
+      cin >> data[i];
+  }
+
+  cout << "Data berhasil disimpan.\n";
+  cin.get(); cin.get();
 }
 
 
@@ -46,14 +55,14 @@ do
   {
    case '1':
     /* code */
-    mPertama("pertama");
+    mInputArray();
     break;
    case '2':
-    mPertama("ke- dua");
+    ();
     /* code */ 
     break;  
    case '3':
-    mPertama("ke- tiga");
+    ();
     /* code */
     break;  
    case '4':
