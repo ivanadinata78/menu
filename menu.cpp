@@ -45,6 +45,21 @@ void mInputArray() {
 }
 
 
+void mTampilkanArray() {
+  system("cls");
+  if (n == 0) {
+      cout << "Array kosong.\n";
+  } else {
+      cout << "Isi array: ";
+      for (int i = 0; i < n; i++) {
+          cout << data[i] << " ";
+      }
+      cout << endl;
+  }
+  cin.get(); cin.get();
+}
+
+
 int main() {
 char pl;
 do
@@ -53,13 +68,11 @@ do
     pl=getch();
   switch (pl)
   {
-   case '1':
-    /* code */
+   case '1': 
     mInputArray();
     break;
    case '2':
-    ();
-    /* code */ 
+    mTampilkanArray();
     break;  
    case '3':
     ();
