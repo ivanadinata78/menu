@@ -132,10 +132,10 @@ do
     break;  
    case '4':
     info();
-    /* code */
+    
     break;  
   case '5':
-    /* code */
+    
     break;
   
   default:
